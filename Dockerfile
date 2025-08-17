@@ -1,4 +1,4 @@
-FROM n8nio/n8n
+FROM n8nio/n8n:latest
 
 USER root
 RUN apk add --no-cache ffmpeg python3 py3-pip py3-virtualenv && python3 -m venv /opt/ytvenv && /opt/ytvenv/bin/pip install --no-cache-dir yt-dlp && ln -s /opt/ytvenv/bin/yt-dlp /usr/local/bin/yt-dlp
